@@ -9,6 +9,11 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.clear {
+    /* dùng để giải quyết vấn đề float thẻ cha ko ôm được các thẻ con */
+    clear: both;
+}
+
 
 #main{
     height: 46px;
@@ -160,12 +165,40 @@ html {
     font-size: 16px;
     text-align: center;
     margin-top: 25px;
+    font-style: italic;
+    /* opacity độ trong suốt */
+    opacity: 0.6;
 
 }
 
 #content .about-text {
     margin-top: 25px;
     font-size: 15px;
+    /* justify cân đều 2 bên của 1 đoạn văn */
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-list {
+    margin-top: 48px;
+    /* overflow: hidden; */
+}
+
+#content .member-name {
+    font-size: 15px;
+
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
 }
 
 
