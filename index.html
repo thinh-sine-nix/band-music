@@ -93,7 +93,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <buttobutton class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -102,7 +102,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button  class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -111,7 +111,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button  class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -128,6 +128,77 @@
         <div id="footer">
 
         </div>
+    
     </div>
+
+    <div class="modal js-modal">
+        <!-- modal chứa toàn bộ giao diện bật lên cả lớp phủ luôn -->
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close" style="font-weight: 600;"></i>
+            </div>
+            <header class="modal-header">
+              <i class="ti-bag modal-icon-bag"></i>
+              Tickets  
+            </header>
+
+            <div class="modal-body">
+                <label for="quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>  
+                <input id="quantity" type="text" class="modal-input" placeholder="How many"> 
+                
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>  
+                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
+            
+                <button id="buy-tickets">
+                    PAY <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need  <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+        // Hàm hiển thị modal mua vé (thêm class open vào modal)
+
+        function showBuyTickets () {
+            modal.classList.add('open')
+        }
+
+
+        // Hàm hiển thị modal mua vé (gỡ bỏ class open của modal)
+
+        function hideBuyTickets () {
+            modal.classList.remove('open')
+        }
+
+        // vòng for tạo biến mới tên buyBtn và biến mới được lưu lần lượt 3 cái nút chạy 3 lần
+        for (const buyBtn of buyBtns)  {
+            buyBtn.addEventListener('click', showBuyTickets) 
+        } 
+
+        modalClose.addEventListener('click',hideBuyTickets)
+
+
+        modal.addEventListener('click',hideBuyTickets)
+
+
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+            // stopPropagation ngăn chặn sự kiện nổi bọt
+        })
+    </script>
 </body>
 </html>

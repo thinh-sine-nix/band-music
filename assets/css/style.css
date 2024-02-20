@@ -301,3 +301,119 @@ html {
 #footer{
 
 }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100%-32px);
+    animation: modalFaceIn ease 0.8s;
+}
+
+
+.modal .modal-header {
+    display: flex;
+    background-color: #009688;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal .modal-icon-bag {
+    margin-right: 16px;
+}
+
+.modal .modal-close {
+    right: 0;
+    top: 0;
+    color: #fff;
+    position: absolute;
+    padding: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.modal .modal-close:hover {
+    opacity: 1;
+    color: #000;
+    background-color: #ccc;
+}
+
+
+.modal .modal-body {
+    padding: 16px;
+}
+
+.modal .modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal .modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover {
+    opacity: 0.7;
+}
+
+.modal .modal-footer {
+    text-align: right;
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.modal .modal-footer a {
+    color: #2196F3;
+}
+
+/* keyframes là 1 cái tạo ra cái tạo ra cái chuyển động liên tiếp hình ảnh tĩnh tạo ra cái hoạt họa  */
+@keyframes modalFaceIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
