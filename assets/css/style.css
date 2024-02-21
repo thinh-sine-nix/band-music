@@ -27,7 +27,26 @@ html {
   clear: both;
 }
 
+/* class chung có thể sử dụng ở nhiều nơi trong html */
+.pull-right {
+  float: right !important;
+}
 
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 15px;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
 
 /* col viết tắt của column */
 .col {
@@ -194,8 +213,7 @@ html {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
-  
+  padding: 64px 0 112px;
 }
 
 #content .section-heading {
@@ -287,7 +305,6 @@ html {
 
 .places-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .place-item {
@@ -322,19 +339,6 @@ html {
 .place-description {
   margin-top: 15px;
   line-height: 1.4;
-}
-
-.place-buy-btn {
-  color: #fff;
-  background-color: #000;
-  text-decoration: none;
-  padding: 11px 15px;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.place-buy-btn:hover {
-  background-color: #ccc;
 }
 
 .modal {
@@ -473,12 +477,37 @@ html {
   width: 100%;
 }
 
-.contact-form .form-submit-btn {
-  color: #fff;
-  background-color: #000;
-  padding: 10px 16px;
-  float: right;
+.map-section img {
+  width: 100%;
 }
 
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+
+#footer .socials-list a {
+  text-decoration: none;
+  /* opacity: 0.6; */
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a:hover ,
+#footer .socials-list a:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a {
+  color: rgba(0, 0, 0, 0.6);
 }
