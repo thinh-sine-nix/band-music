@@ -7,6 +7,7 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .clear {
@@ -95,6 +96,7 @@ html {
   left: 0;
   right: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 #nav {
@@ -141,6 +143,7 @@ html {
   font-size: 14px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
   float: right;
   padding: 0 21px;
@@ -152,6 +155,15 @@ html {
   background-color: #f44336 !important;
 }
 
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
   font-size: 20px;
   color: #fff;
@@ -211,9 +223,12 @@ html {
 
 #content .content-section {
   width: 800px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 64px 0 112px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading {
@@ -486,11 +501,9 @@ html {
   text-align: center;
 }
 
-
 #footer .socials-list {
   font-size: 24px;
 }
-
 
 #footer .socials-list a {
   text-decoration: none;
@@ -498,7 +511,7 @@ html {
   color: rgba(0, 0, 0, 0.6);
 }
 
-#footer .copyright a:hover ,
+#footer .copyright a:hover,
 #footer .socials-list a:hover {
   color: rgba(0, 0, 0, 0.4);
 }
