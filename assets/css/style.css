@@ -96,7 +96,7 @@ html {
   left: 0;
   right: 0;
   z-index: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #nav {
@@ -141,6 +141,13 @@ html {
 
 #nav .nav-arrow-down {
   font-size: 14px;
+}
+
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 
 #header .mobile-menu-btn,
@@ -257,7 +264,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 32px;
   /* overflow: hidden; */
 }
 
@@ -319,7 +326,7 @@ html {
 /* Places */
 
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-item {
